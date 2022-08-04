@@ -1,14 +1,25 @@
 <div class="container search-bar">
   <div class="search-bar-outer">
     <div class="search-bar-inner">
-      <form action="/search">
-        <h4 class="mb-2">尋找餐廳：</h4>
-        <div class="input-group">
+      <h4 class="mb-2">尋找餐廳：</h4>
+      <form action="/search" class="d-flex justify-content-between">
+        <div class="input-group" style="width: 500px;">
           <input type="text" name="findEat" class="form-control" placeholder="輸入餐廳、分類" aria-label="Restaurant Name..."
             value="{{keyword}}" aria-describedby="search-button">
           <div class="input-group-append">
             <button class="btn btn-major" type="submit" id="search-button"><i class="fas fa-search"></i></button>
           </div>
+        </div>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+            aria-expanded="false" style="width: 100px ;">
+            排序
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">A-Z</a></li>
+            <li><a class="dropdown-item" href="#">Z-A</a></li>
+            <li><a class="dropdown-item" href="#">評分排行</a></li>
+          </ul>
         </div>
       </form>
     </div>
@@ -16,7 +27,7 @@
 </div>
 
 <div class="container">
-  <div class="d-flex justify-content-end mt-2">
+  <div class="d-flex justify-content-center mt-2">
     <a href="/restaurants/add-new" class="btn">add new restaurunt</a>
   </div>
 </div>
@@ -48,7 +59,7 @@
             <div style="height: 20%;">
               <a href="/restaurants/{{this._id}}" class="text-secondary col-sm-4 btn">detail</a>
               <a href="/restaurants/{{this._id}}/adit" class="btn">edit</a>
-              <form action="/restaurants/{{this._id}}/delete" class="d-inline" method="POST">
+              <form action="/restaurants/{{this._id}}?_method=DELETE" class="d-inline" method="POST">
                 <button type="submit" class="btn btn-danger">delete</button>
               </form>
             </div>

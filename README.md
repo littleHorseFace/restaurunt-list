@@ -10,6 +10,7 @@
 
 - 查看所有餐廳
 - 瀏覽餐廳的詳細資訊
+- 可收尋地圖位置
 - 搜尋特定餐廳
 - 建造餐廳
 - 修改餐廳重要資訊
@@ -54,3 +55,4 @@
 * express - v 4.16.4
 * express-handlebars - v 3.0.0
 * nodemon - v 2.0.19
+* method-override - V 3.0.0
