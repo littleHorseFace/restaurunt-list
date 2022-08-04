@@ -7,10 +7,10 @@ const todoSchema = new Schema({
     required: true
 
   },
-  category : {
+  category: {
     type: String,
     required: true
-   },
+  },
   image: {
     type: String,
     required: true
@@ -22,12 +22,16 @@ const todoSchema = new Schema({
   phone: {
     type: String,
     required: true
-  }, 
+  },
   rating: {
     type: String,
     required: true
   },
   description: {
+    type: String,
+    required: true
+  },
+  google_map: {
     type: String,
     required: true
   },

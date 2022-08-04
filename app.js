@@ -68,6 +68,7 @@ app.post('/restaurants/add-new', (req, res) => {
   const phone = req.body.phone
   const rating = req.body.rating
   const description = req.body.description
+  const google_map = req.body.map
   const newRest = new Rest({
     name,
     category,
@@ -76,6 +77,7 @@ app.post('/restaurants/add-new', (req, res) => {
     phone,
     rating,
     description,
+    google_map
   })
 
   newRest.save()
