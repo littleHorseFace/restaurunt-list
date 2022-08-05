@@ -5,8 +5,8 @@ const exphbs = require('express-handlebars')
 const parser = require('body-parser')
 const methodOverride = require('method-override')
 
-const routes = require('./config')
-require('./models/mongoose')
+const routes = require('./routes')
+require('./config/mongoose')
 
 const port = 3000
 

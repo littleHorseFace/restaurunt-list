@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const Rest = require('../../moduls/todo')
+const Rest = require('../../models/todo')
 
 router.get('/', (req, res) => {
   const searchEat = req.query.findEat

@@ -37,37 +37,35 @@
     <div class="col-md-10 col-12 mx-auto">
       <div class="card-columns row">
         {{#each restaurantList}}
-        {{!-- <a href="/restaurants/{{this._id}}" class="text-secondary col-sm-4"> --}}
-          <div class="col-sm-4 d-flex flex-column justify-content-between"
-            style="margin-bottom : 40px ; height : 50vh;">
-            <div class="card mb-3" style="height: 78%;">
-              <img class="card-img-top" src="{{this.image}}" alt="{{this.name}}" style="height: 60%;">
-              <div class="card-body p-3" style="height: 40%;">
-                <h6 class="card-title mb-1">{{this.name}}</h6>
+        <div class="col-sm-4 d-flex flex-column justify-content-between" style="margin-bottom : 40px ; height : 50vh;">
+          <div class="card mb-3" style="height: 78%;">
+            <img class="card-img-top" src="{{this.image}}" alt="{{this.name}}" style="height: 60%;">
+            <div class="card-body p-3" style="height: 40%;">
+              <h6 class="card-title mb-1">{{this.name}}</h6>
 
-                <div class="restaurant-category mb-1">
-                  <i class="fas fa-utensils pr-2"></i> {{this.category}}
-                </div>
-
-                <span class="">
-                  {{this.rating}}
-                  <i class="fas fa-star fa-xs"></i>
-                </span>
-
+              <div class="restaurant-category mb-1">
+                <i class="fas fa-utensils pr-2"></i> {{this.category}}
               </div>
-            </div>
-            <div style="height: 20%;">
-              <a href="/restaurants/{{this._id}}" class="text-secondary col-sm-4 btn">detail</a>
-              <a href="/restaurants/{{this._id}}/adit" class="btn">edit</a>
-              <form action="/restaurants/{{this._id}}?_method=DELETE" class="d-inline" method="POST">
-                <button type="submit" class="btn btn-danger">delete</button>
-              </form>
-            </div>
 
+              <span class="">
+                {{this.rating}}
+                <i class="fas fa-star fa-xs"></i>
+              </span>
+
+            </div>
+          </div>
+          <div style="height: 20%;">
+            <a href="/restaurants/{{this._id}}" class="text-secondary col-sm-4 btn">detail</a>
+            <a href="/restaurants/{{this._id}}/adit" class="btn">edit</a>
+            <form action="/restaurants/{{this._id}}?_method=DELETE" class="d-inline" method="POST">
+              <button type="submit" class="btn btn-danger">delete</button>
+            </form>
           </div>
 
+        </div>
 
-          {{/each}}
+
+        {{/each}}
       </div>
     </div>
   </div>

@@ -6,35 +6,40 @@
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">creat retaurunt name</label>
         <input type="text" class="form-control" id="exampleInputEmail1" name="name" aria-describedby="emailHelp"
-          placeholder="name">
+          placeholder="name" required>
       </div>
       <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">creat restaurunt adress</label>
-        <input type="text" class="form-control" id="exampleInputPassword1" name="adress" placeholder="adress">
+        <input type="text" class="form-control" id="exampleInputPassword1" name="adress" placeholder="adress" required>
       </div>
       <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">creat restaurunt category</label>
-        <input type="text" class="form-control" id="exampleInputPassword1" name="category" placeholder="category">
+        <input type="text" class="form-control" id="exampleInputPassword1" name="category" placeholder="category"
+          required>
       </div>
       <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">creat restaurunt phone</label>
-        <input type="text" class="form-control" id="exampleInputPassword1" name="phone" placeholder="phone">
+        <label for="exampleInputPassword1" class="form-label">creat restaurunt phone (必須輸入7個號碼以上)</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" name="phone" placeholder="phone"
+          pattern="[0-9]{7," "}" required>
       </div>
       <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">creat restaurunt rating</label>
-        <input type="text" class="form-control" id="exampleInputPassword1" name="rating" placeholder="rating">
+        <label for="exampleInputPassword1" class="form-label">creat restaurunt rating (請輸入 ex: 3.5 必須三位數 包含'.'
+          最高4.9分)</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" name="rating" placeholder="rating"
+          pattern="[0-4].[0-9]" required>
+        {{!-- 以上想請問助教 如果也要 包括5.0分也可以輸入呢 要怎麼寫 pattern 的值 --}}
       </div>
       <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">creat restaurunt image</label>
-        <input type="text" class="form-control" id="exampleInputPassword1" name="image" placeholder="image">
+        <label for="exampleInputPassword1" class="form-label">creat restaurunt image (請輸入圖片網址)</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" name="image" placeholder="image" required>
       </div>
       <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">creat restaurunt google-map</label>
-        <input type="text" class="form-control" id="exampleInputPassword1" name="map" placeholder="google-map">
+        <label for="exampleInputPassword1" class="form-label">creat restaurunt google-map (請輸入餐廳網址)</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" name="map" placeholder="google-map" required>
       </div>
       <div class="mb-3">
         <label for="exampleFormControlTextarea1" class="form-label">creat restaurunt description</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="description"></textarea>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="description" required></textarea>
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>

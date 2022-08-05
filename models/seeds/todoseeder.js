@@ -1,7 +1,7 @@
 const Rest = require('../todo') // 載入 todo model
 const restfile = require('./restfile')
 
-const db = require('../../models/mongoose')
+const db = require('../../config/mongoose')
 
 db.once('open', () => {
   console.log('mongodb connected!')
