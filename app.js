@@ -8,7 +8,7 @@ const methodOverride = require('method-override')
 const routes = require('./routes')
 require('./config/mongoose')
 
-const port = process.env.PORT || 3000
+const PORT = process.env.PORT || 3000
 
 const app = express()
 
@@ -23,6 +23,6 @@ app.use(methodOverride('_method'))
 app.use(routes)
 
 // start and listen on the Express server
-app.listen(port, () => {
+app.listen(PORT, () => {
   console.log(`Express is listening on http://localhost:${port}`)
 })
